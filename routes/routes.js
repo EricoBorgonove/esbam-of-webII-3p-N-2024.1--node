@@ -6,6 +6,9 @@ const router = express.Router()
 
 router.get('/users', UsersController.showAll)
 router.get('/users/:id', UsersController.show)
+router.post('/users', UsersController.create)
+router.put('/users/:id', UsersController.update)
+router.delete('/users/:id', UsersController.delete)
 
 router.get('/pagina', (req, res) => {
     res.sendFile(path.resolve('./public/pagina.html'))
